@@ -520,6 +520,52 @@ body {
   .fish-detail-panel { display: none; }
 }
 
+@media (min-width: 768px) {
+  .detail-modal-overlay { display: none; }
+
+  /* Scale up the pixel-font UI for iPad / desktop */
+  .app-header h1    { font-size: 22px; }
+  .app-header .subtitle { font-size: 11px; }
+  .nav-tab          { font-size: 10px; padding: 14px 16px; }
+  .fish-result-name,
+  .fish-result-price,
+  .fish-result-type { font-size: 11px; }
+  .fish-result-row  { padding: 10px 12px; }
+  .fish-card-name   { font-size: 14px; }
+  .fish-card-type,
+  .fish-stat-label  { font-size: 9px; }
+  .fish-stat-value  { font-size: 11px; }
+  .fish-price-tag   { font-size: 8px; }
+  .fish-price-val   { font-size: 12px; }
+  .fish-tag         { font-size: 9px; }
+  .fish-note        { font-size: 9px; }
+  .fish-detail-empty-text { font-size: 11px; }
+  .fish-type-pill   { font-size: 9px; }
+  .fish-search-input { font-size: 16px; }
+
+  .villager-card-name   { font-size: 14px; }
+  .villager-card-address,
+  .villager-marriageable-badge { font-size: 9px; }
+  .villager-desc    { font-size: 9px; }
+  .villager-birthday-label,
+  .villager-birthday-badge { font-size: 9px; }
+  .villager-gift-tier-label { font-size: 9px; }
+  .villager-gift-tag { font-size: 9px; }
+
+  .recipe-card-name  { font-size: 13px; }
+  .recipe-source-pill { font-size: 8px; }
+  .recipe-ingredients-label { font-size: 9px; }
+  .recipe-ingredient-tag { font-size: 9px; }
+  .recipe-sell-price { font-size: 9px; }
+  .recipe-learn-btn  { font-size: 8px; }
+
+  .home-section-label { font-size: 11px; }
+  .home-section-desc  { font-size: 8px; }
+  .home-hero-title    { font-size: 28px; }
+  .home-hero-sub      { font-size: 13px; }
+  .home-hero-tagline  { font-size: 10px; }
+}
+
 /* Results list */
 .fish-results-list {
   background: var(--parchment);
@@ -1276,12 +1322,8 @@ body {
 
 .birthday-seasons-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 12px;
-}
-
-@media (max-width: 900px) {
-  .birthday-seasons-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 540px) {

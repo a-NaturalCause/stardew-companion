@@ -1,5 +1,6 @@
 import { useState, useMemo, useEffect } from 'react'
 import { VILLAGERS, VILLAGER_TYPES } from './data/villagers'
+import { useIsMobile } from './useIsMobile'
 
 const SEASON_COLORS = {
   Spring: { bg: '#c8f0a0', text: '#1a5c00', border: '#4a7c2f' },
@@ -89,6 +90,7 @@ export default function VillagerGuide({ linkedVillager = null, onClearLink = nul
   const [query, setQuery] = useState('')
   const [selectedType, setSelectedType] = useState('All')
   const [selectedVillager, setSelectedVillager] = useState(null)
+  const isMobile = useIsMobile()
 
   useEffect(() => {
     if (linkedVillager) {
@@ -190,8 +192,8 @@ export default function VillagerGuide({ linkedVillager = null, onClearLink = nul
         </div>
       </div>
 
-      {/* Modal for mobile */}
-      {selectedVillager && (
+      {/* Modal for mobile only */}
+      {isMobile && selectedVillager && (
         <div className="detail-modal-overlay" onClick={() => setSelectedVillager(null)}>
           <div className="detail-modal" onClick={e => e.stopPropagation()}>
             <button className="detail-modal-close" onClick={() => setSelectedVillager(null)}>✕</button>

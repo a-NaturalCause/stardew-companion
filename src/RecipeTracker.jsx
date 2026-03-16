@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react'
 import { RECIPES, RECIPE_FILTER_TYPES } from './data/recipes'
+import { useIsMobile } from './useIsMobile'
 
 const STORAGE_KEY = 'stardew_recipes_learned'
 
@@ -78,6 +79,7 @@ export default function RecipeTracker() {
   const [query, setQuery] = useState('')
   const [filter, setFilter] = useState('All')
   const [selected, setSelected] = useState(null)
+  const isMobile = useIsMobile()
 
   function toggleLearned(id) {
     setLearned(prev => {
@@ -186,8 +188,8 @@ export default function RecipeTracker() {
         </div>
       </div>
 
-      {/* Modal for mobile */}
-      {selected && (
+      {/* Modal for mobile only */}
+      {isMobile && selected && (
         <div className="detail-modal-overlay" onClick={() => setSelected(null)}>
           <div className="detail-modal" onClick={e => e.stopPropagation()}>
             <button className="detail-modal-close" onClick={() => setSelected(null)}>✕</button>

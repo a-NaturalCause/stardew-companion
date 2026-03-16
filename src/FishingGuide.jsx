@@ -1,5 +1,6 @@
 import { useState, useMemo } from 'react'
 import { FISH, FISH_TYPES } from './data/fish'
+import { useIsMobile } from './useIsMobile'
 
 const SEASON_COLORS = {
   Spring: { bg: '#c8f0a0', text: '#1a5c00', border: '#4a7c2f' },
@@ -160,6 +161,7 @@ export default function FishingGuide() {
   const [query, setQuery] = useState('')
   const [selectedType, setSelectedType] = useState('All')
   const [selectedFish, setSelectedFish] = useState(null)
+  const isMobile = useIsMobile()
 
   const results = useMemo(() => {
     return FISH.filter(f => {
@@ -244,8 +246,8 @@ export default function FishingGuide() {
         </div>
       </div>
 
-      {/* Modal for mobile */}
-      {selectedFish && (
+      {/* Modal for mobile only */}
+      {isMobile && selectedFish && (
         <div className="detail-modal-overlay" onClick={() => setSelectedFish(null)}>
           <div className="detail-modal" onClick={e => e.stopPropagation()}>
             <button className="detail-modal-close" onClick={() => setSelectedFish(null)}>✕</button>
