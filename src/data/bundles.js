@@ -1,0 +1,376 @@
+export const ROOMS = [
+  {
+    id: "crafts_room",
+    name: "Crafts Room",
+    bundles: [
+      {
+        id: "spring_foraging",
+        name: "Spring Foraging Bundle",
+        reward: "Spring Seeds (30)",
+        items: [
+          { id: "daffodil", name: "Daffodil", sprite: "/sprites/Daffodil.png" },
+          { id: "leek", name: "Leek", sprite: "/sprites/Leek.png" },
+          { id: "dandelion", name: "Dandelion", sprite: "/sprites/Dandelion.png" },
+          { id: "parsnip", name: "Parsnip", sprite: "/sprites/Parsnip.png" },
+        ],
+      },
+      {
+        id: "summer_foraging",
+        name: "Summer Foraging Bundle",
+        reward: "Summer Seeds (30)",
+        items: [
+          { id: "grape", name: "Grape", sprite: "/sprites/Grape.png" },
+          { id: "spice_berry", name: "Spice Berry", sprite: "/sprites/Spice_Berry.png" },
+          { id: "sweet_pea", name: "Sweet Pea", sprite: "/sprites/Sweet_Pea.png" },
+        ],
+      },
+      {
+        id: "fall_foraging",
+        name: "Fall Foraging Bundle",
+        reward: "Fall Seeds (30)",
+        items: [
+          { id: "common_mushroom", name: "Common Mushroom", sprite: "/sprites/Common_Mushroom.png" },
+          { id: "wild_plum", name: "Wild Plum", sprite: "/sprites/Wild_Plum.png" },
+          { id: "hazelnut", name: "Hazelnut", sprite: "/sprites/Hazelnut.png" },
+          { id: "blackberry", name: "Blackberry", sprite: "/sprites/Blackberry.png" },
+        ],
+      },
+      {
+        id: "winter_foraging",
+        name: "Winter Foraging Bundle",
+        reward: "Winter Seeds (30)",
+        items: [
+          { id: "winter_root", name: "Winter Root", sprite: "/sprites/Winter_Root.png" },
+          { id: "crystal_fruit", name: "Crystal Fruit", sprite: "/sprites/Crystal_Fruit.png" },
+          { id: "snow_yam", name: "Snow Yam", sprite: "/sprites/Snow_Yam.png" },
+          { id: "crocus", name: "Crocus", sprite: "/sprites/Crocus.png" },
+          { id: "holly", name: "Holly", sprite: "/sprites/Holly.png" },
+        ],
+      },
+      {
+        id: "construction",
+        name: "Construction Bundle",
+        reward: "Charcoal Kiln",
+        items: [
+          { id: "wood", name: "Wood (99)", sprite: "/sprites/Wood.png" },
+          { id: "stone", name: "Stone (99)", sprite: "/sprites/Stone.png" },
+          { id: "hardwood", name: "Hardwood (10)", sprite: "/sprites/Hardwood.png" },
+        ],
+      },
+      {
+        id: "exotic_foraging",
+        name: "Exotic Foraging Bundle",
+        reward: "Autumn's Bounty",
+        items: [
+          { id: "coconut", name: "Coconut", sprite: "/sprites/Coconut.png" },
+          { id: "cactus_fruit", name: "Cactus Fruit", sprite: "/sprites/Cactus_Fruit.png" },
+          { id: "cave_carrot", name: "Cave Carrot", sprite: "/sprites/Cave_Carrot.png" },
+          { id: "red_mushroom", name: "Red Mushroom", sprite: "/sprites/Red_Mushroom.png" },
+          { id: "purple_mushroom", name: "Purple Mushroom", sprite: "/sprites/Purple_Mushroom.png" },
+          { id: "maple_syrup", name: "Maple Syrup", sprite: "/sprites/Maple_Syrup.png" },
+          { id: "oak_resin", name: "Oak Resin", sprite: "/sprites/Oak_Resin.png" },
+          { id: "pine_tar", name: "Pine Tar", sprite: "/sprites/Pine_Tar.png" },
+          { id: "morel", name: "Morel", sprite: "/sprites/Morel.png" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "pantry",
+    name: "Pantry",
+    bundles: [
+      {
+        id: "spring_crops",
+        name: "Spring Crops Bundle",
+        reward: "Speed-Gro (20)",
+        items: [
+          { id: "parsnip2", name: "Parsnip", sprite: "/sprites/Parsnip.png" },
+          { id: "green_bean", name: "Green Bean", sprite: "/sprites/Green_Bean.png" },
+          { id: "cauliflower", name: "Cauliflower", sprite: "/sprites/Cauliflower.png" },
+          { id: "potato", name: "Potato", sprite: "/sprites/Potato.png" },
+        ],
+      },
+      {
+        id: "summer_crops",
+        name: "Summer Crops Bundle",
+        reward: "Quality Sprinkler",
+        items: [
+          { id: "tomato", name: "Tomato", sprite: "/sprites/Tomato.png" },
+          { id: "hot_pepper", name: "Hot Pepper", sprite: "/sprites/Hot_Pepper.png" },
+          { id: "blueberry", name: "Blueberry", sprite: "/sprites/Blueberry.png" },
+          { id: "melon", name: "Melon", sprite: "/sprites/Melon.png" },
+        ],
+      },
+      {
+        id: "fall_crops",
+        name: "Fall Crops Bundle",
+        reward: "Bee House",
+        items: [
+          { id: "corn", name: "Corn", sprite: "/sprites/Corn.png" },
+          { id: "eggplant", name: "Eggplant", sprite: "/sprites/Eggplant.png" },
+          { id: "pumpkin", name: "Pumpkin", sprite: "/sprites/Pumpkin.png" },
+          { id: "yam", name: "Yam", sprite: "/sprites/Yam.png" },
+        ],
+      },
+      {
+        id: "quality_crops",
+        name: "Quality Crops Bundle",
+        reward: "Preserves Jar",
+        items: [
+          { id: "parsnip_gold", name: "Parsnip (Gold, 5)", sprite: "/sprites/Parsnip.png" },
+          { id: "melon_gold", name: "Melon (Gold, 5)", sprite: "/sprites/Melon.png" },
+          { id: "pumpkin_gold", name: "Pumpkin (Gold, 5)", sprite: "/sprites/Pumpkin.png" },
+          { id: "corn_gold", name: "Corn (Gold, 5)", sprite: "/sprites/Corn.png" },
+        ],
+      },
+      {
+        id: "animal",
+        name: "Animal Bundle",
+        reward: "Cheese Press",
+        items: [
+          { id: "large_milk", name: "Large Milk", sprite: "/sprites/Large_Milk.png" },
+          { id: "large_egg", name: "Large Egg", sprite: "/sprites/Large_Egg.png" },
+          { id: "large_goat_milk", name: "Large Goat Milk", sprite: "/sprites/Large_Goat_Milk.png" },
+          { id: "wool", name: "Wool", sprite: "/sprites/Wool.png" },
+          { id: "duck_egg", name: "Duck Egg", sprite: "/sprites/Duck_Egg.png" },
+        ],
+      },
+      {
+        id: "artisan",
+        name: "Artisan Bundle",
+        reward: "Keg",
+        items: [
+          { id: "truffle_oil", name: "Truffle Oil", sprite: "/sprites/Truffle_Oil.png" },
+          { id: "cloth", name: "Cloth", sprite: "/sprites/Cloth.png" },
+          { id: "goat_cheese", name: "Goat Cheese", sprite: "/sprites/Goat_Cheese.png" },
+          { id: "cheese", name: "Cheese", sprite: "/sprites/Cheese.png" },
+          { id: "honey", name: "Honey", sprite: "/sprites/Honey.png" },
+          { id: "jelly", name: "Jelly", sprite: "/sprites/Jelly.png" },
+          { id: "apple", name: "Apple", sprite: "/sprites/Apple.png" },
+          { id: "apricot", name: "Apricot", sprite: "/sprites/Apricot.png" },
+          { id: "orange", name: "Orange", sprite: "/sprites/Orange.png" },
+          { id: "peach", name: "Peach", sprite: "/sprites/Peach.png" },
+          { id: "pomegranate", name: "Pomegranate", sprite: "/sprites/Pomegranate.png" },
+          { id: "cherry", name: "Cherry", sprite: "/sprites/Cherry.png" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "fish_tank",
+    name: "Fish Tank",
+    bundles: [
+      {
+        id: "river_fish",
+        name: "River Fish Bundle",
+        reward: "Bait (30)",
+        items: [
+          { id: "sunfish", name: "Sunfish", sprite: "/sprites/Sunfish.png" },
+          { id: "catfish", name: "Catfish", sprite: "/sprites/Catfish.png" },
+          { id: "shad", name: "Shad", sprite: "/sprites/Shad.png" },
+          { id: "tiger_trout", name: "Tiger Trout", sprite: "/sprites/Tiger_Trout.png" },
+        ],
+      },
+      {
+        id: "lake_fish",
+        name: "Lake Fish Bundle",
+        reward: "Dressed Spinner",
+        items: [
+          { id: "largemouth_bass", name: "Largemouth Bass", sprite: "/sprites/Largemouth_Bass.png" },
+          { id: "carp", name: "Carp", sprite: "/sprites/Carp.png" },
+          { id: "bullhead", name: "Bullhead", sprite: "/sprites/Bullhead.png" },
+          { id: "sturgeon", name: "Sturgeon", sprite: "/sprites/Sturgeon.png" },
+        ],
+      },
+      {
+        id: "ocean_fish",
+        name: "Ocean Fish Bundle",
+        reward: "Warp Totem: Beach (5)",
+        items: [
+          { id: "sardine", name: "Sardine", sprite: "/sprites/Sardine.png" },
+          { id: "tuna", name: "Tuna", sprite: "/sprites/Tuna.png" },
+          { id: "red_snapper", name: "Red Snapper", sprite: "/sprites/Red_Snapper.png" },
+          { id: "tilapia", name: "Tilapia", sprite: "/sprites/Tilapia.png" },
+        ],
+      },
+      {
+        id: "night_fishing",
+        name: "Night Fishing Bundle",
+        reward: "Small Glow Ring",
+        items: [
+          { id: "walleye", name: "Walleye", sprite: "/sprites/Walleye.png" },
+          { id: "bream", name: "Bream", sprite: "/sprites/Bream.png" },
+          { id: "eel", name: "Eel", sprite: "/sprites/Eel.png" },
+        ],
+      },
+      {
+        id: "crab_pot",
+        name: "Crab Pot Bundle",
+        reward: "Crab Pot (3)",
+        items: [
+          { id: "lobster", name: "Lobster", sprite: "/sprites/Lobster.png" },
+          { id: "crayfish", name: "Crayfish", sprite: "/sprites/Crayfish.png" },
+          { id: "crab", name: "Crab", sprite: "/sprites/Crab.png" },
+          { id: "cockle", name: "Cockle", sprite: "/sprites/Cockle.png" },
+          { id: "mussel", name: "Mussel", sprite: "/sprites/Mussel.png" },
+          { id: "shrimp", name: "Shrimp", sprite: "/sprites/Shrimp.png" },
+          { id: "snail", name: "Snail", sprite: "/sprites/Snail.png" },
+          { id: "periwinkle", name: "Periwinkle", sprite: "/sprites/Periwinkle.png" },
+          { id: "oyster", name: "Oyster", sprite: "/sprites/Oyster.png" },
+          { id: "clam", name: "Clam", sprite: "/sprites/Clam.png" },
+        ],
+      },
+      {
+        id: "specialty_fish",
+        name: "Specialty Fish Bundle",
+        reward: "Dish O' The Sea (5)",
+        items: [
+          { id: "pufferfish", name: "Pufferfish", sprite: "/sprites/Pufferfish.png" },
+          { id: "ghostfish", name: "Ghostfish", sprite: "/sprites/Ghostfish.png" },
+          { id: "sandfish", name: "Sandfish", sprite: "/sprites/Sandfish.png" },
+          { id: "woodskip", name: "Woodskip", sprite: "/sprites/Woodskip.png" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "boiler_room",
+    name: "Boiler Room",
+    bundles: [
+      {
+        id: "blacksmiths",
+        name: "Blacksmith's Bundle",
+        reward: "Furnace",
+        items: [
+          { id: "copper_bar", name: "Copper Bar", sprite: "/sprites/Copper_Bar.png" },
+          { id: "iron_bar", name: "Iron Bar", sprite: "/sprites/Iron_Bar.png" },
+          { id: "gold_bar", name: "Gold Bar", sprite: "/sprites/Gold_Bar.png" },
+        ],
+      },
+      {
+        id: "geologists",
+        name: "Geologist's Bundle",
+        reward: "Omni Geode (5)",
+        items: [
+          { id: "quartz", name: "Quartz", sprite: "/sprites/Quartz.png" },
+          { id: "earth_crystal", name: "Earth Crystal", sprite: "/sprites/Earth_Crystal.png" },
+          { id: "frozen_tear", name: "Frozen Tear", sprite: "/sprites/Frozen_Tear.png" },
+          { id: "fire_quartz", name: "Fire Quartz", sprite: "/sprites/Fire_Quartz.png" },
+        ],
+      },
+      {
+        id: "adventurers",
+        name: "Adventurer's Bundle",
+        reward: "Small Magnet Ring",
+        items: [
+          { id: "slime", name: "Slime (99)", sprite: "/sprites/Slime.png" },
+          { id: "bat_wing", name: "Bat Wing (10)", sprite: "/sprites/Bat_Wing.png" },
+          { id: "solar_essence", name: "Solar Essence", sprite: "/sprites/Solar_Essence.png" },
+          { id: "void_essence", name: "Void Essence", sprite: "/sprites/Void_Essence.png" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "bulletin_board",
+    name: "Bulletin Board",
+    bundles: [
+      {
+        id: "chefs",
+        name: "Chef's Bundle",
+        reward: "Maple Syrup",
+        items: [
+          { id: "maple_syrup2", name: "Maple Syrup", sprite: "/sprites/Maple_Syrup.png" },
+          { id: "fiddlehead_fern", name: "Fiddlehead Fern", sprite: "/sprites/Fiddlehead_Fern.png" },
+          { id: "truffle", name: "Truffle", sprite: "/sprites/Truffle.png" },
+          { id: "poppy", name: "Poppy", sprite: "/sprites/Poppy.png" },
+          { id: "maki_roll", name: "Maki Roll", sprite: "/sprites/Maki_Roll.png" },
+          { id: "fried_egg", name: "Fried Egg", sprite: "/sprites/Fried_Egg.png" },
+        ],
+      },
+      {
+        id: "dye",
+        name: "Dye Bundle",
+        reward: "Seed Maker",
+        items: [
+          { id: "red_mushroom2", name: "Red Mushroom", sprite: "/sprites/Red_Mushroom.png" },
+          { id: "sea_urchin", name: "Sea Urchin", sprite: "/sprites/Sea_Urchin.png" },
+          { id: "sunflower", name: "Sunflower", sprite: "/sprites/Sunflower.png" },
+          { id: "duck_feather", name: "Duck Feather", sprite: "/sprites/Duck_Feather.png" },
+          { id: "aquamarine", name: "Aquamarine", sprite: "/sprites/Aquamarine.png" },
+          { id: "red_cabbage", name: "Red Cabbage", sprite: "/sprites/Red_Cabbage.png" },
+        ],
+      },
+      {
+        id: "field_research",
+        name: "Field Research Bundle",
+        reward: "Recycling Machine",
+        items: [
+          { id: "purple_mushroom2", name: "Purple Mushroom", sprite: "/sprites/Purple_Mushroom.png" },
+          { id: "nautilus_shell", name: "Nautilus Shell", sprite: "/sprites/Nautilus_Shell.png" },
+          { id: "chub", name: "Chub", sprite: "/sprites/Chub.png" },
+          { id: "frozen_geode", name: "Frozen Geode", sprite: "/sprites/Frozen_Geode.png" },
+        ],
+      },
+      {
+        id: "fodder",
+        name: "Fodder Bundle",
+        reward: "Heater",
+        items: [
+          { id: "wheat", name: "Wheat (10)", sprite: "/sprites/Wheat.png" },
+          { id: "hay", name: "Hay (10)", sprite: "/sprites/Hay.png" },
+          { id: "apple2", name: "Apple (3)", sprite: "/sprites/Apple.png" },
+        ],
+      },
+      {
+        id: "enchanters",
+        name: "Enchanter's Bundle",
+        reward: "Pierre's Missing Stocklist",
+        items: [
+          { id: "oak_resin2", name: "Oak Resin", sprite: "/sprites/Oak_Resin.png" },
+          { id: "wine", name: "Wine", sprite: "/sprites/Wine.png" },
+          { id: "rabbit_foot", name: "Rabbit's Foot", sprite: "/sprites/Rabbit_Foot.png" },
+          { id: "pomegranate2", name: "Pomegranate", sprite: "/sprites/Pomegranate.png" },
+        ],
+      },
+    ],
+  },
+  {
+    id: "vault",
+    name: "Vault",
+    bundles: [
+      {
+        id: "2500g",
+        name: "2,500g Bundle",
+        reward: "Chocolate Cake",
+        items: [
+          { id: "gold_2500", name: "2,500g", sprite: "/sprites/Money.png" },
+        ],
+      },
+      {
+        id: "5000g",
+        name: "5,000g Bundle",
+        reward: "Starfruit Seeds (5)",
+        items: [
+          { id: "gold_5000", name: "5,000g", sprite: "/sprites/Money.png" },
+        ],
+      },
+      {
+        id: "10000g",
+        name: "10,000g Bundle",
+        reward: "Iridium Sprinkler",
+        items: [
+          { id: "gold_10000", name: "10,000g", sprite: "/sprites/Money.png" },
+        ],
+      },
+      {
+        id: "25000g",
+        name: "25,000g Bundle",
+        reward: "Skull Key",
+        items: [
+          { id: "gold_25000", name: "25,000g", sprite: "/sprites/Money.png" },
+        ],
+      },
+    ],
+  },
+];
