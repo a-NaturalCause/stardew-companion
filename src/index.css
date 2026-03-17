@@ -1738,3 +1738,88 @@ body {
 ::-webkit-scrollbar-track { background: var(--brown-dark); }
 ::-webkit-scrollbar-thumb { background: var(--brown-mid); border: 2px solid var(--brown-dark); }
 ::-webkit-scrollbar-thumb:hover { background: var(--brown-light); }
+
+/* ── APP STORE BANNER ─────────────────────────────────────────────── */
+.appstore-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  background: #1a1a2e;
+  border-bottom: 2px solid var(--gold-dark);
+  padding: 10px 16px;
+}
+
+.appstore-banner-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.appstore-banner-star {
+  font-size: 22px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.appstore-banner-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.appstore-banner-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  color: var(--gold);
+  white-space: nowrap;
+}
+
+.appstore-banner-sub {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 5px;
+  color: #aab4be;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.appstore-banner-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.appstore-badge-btn {
+  display: block;
+  flex-shrink: 0;
+}
+
+.appstore-badge-svg {
+  width: 110px;
+  height: 37px;
+  display: block;
+}
+
+.appstore-banner-dismiss {
+  background: none;
+  border: none;
+  color: #aab4be;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.appstore-banner-dismiss:hover {
+  color: #fff;
+}
+
+@media (max-width: 480px) {
+  .appstore-banner-sub { display: none; }
+  .appstore-badge-svg  { width: 90px; height: 30px; }
+}

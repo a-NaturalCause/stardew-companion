@@ -7,6 +7,7 @@ import CropPlanner from './CropPlanner'
 import MuseumChecklist from './MuseumChecklist'
 import RecipeTracker from './RecipeTracker'
 import HomeScreen from './HomeScreen'
+import AppStoreBanner from './AppStoreBanner'
 import './index.css'
 
 const STORAGE_KEY = 'stardew_cc_progress'
@@ -157,6 +158,7 @@ export default function App() {
 
   return (
     <div>
+      <AppStoreBanner />
       <header className="app-header">
         <h1>Stardew Valley</h1>
         <div className="subtitle">Companion App</div>
